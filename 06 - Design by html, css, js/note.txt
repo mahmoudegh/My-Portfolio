@@ -1,0 +1,9 @@
+- No Framework
+- Nanilla JavaScript
+- Many Pllugins
+- jQuery For Plugins
+- UI/UX Sketches
+- Mind Mapping
+- My VV Code Extensions
+- No SASS
+- No PugJs

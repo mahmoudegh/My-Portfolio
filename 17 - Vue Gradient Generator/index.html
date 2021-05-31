@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js Tutorials and Examples</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="elzero-app" class="container">
+      <div
+        class="grad-box"
+        :style="{ backgroundImage: 'linear-gradient('+ direction +' , '+ colorOne +' , '+ colorTwo +')' }"
+      >
+        Gradient Preview
+      </div>
+      <form action="">
+        <div class="form-group">
+          <label for="direction">Direction</label>
+          <!-- <input type="text" v-model="direction" /> -->
+          <select name="direction" v-model="direction">
+            <option value="to right">to right</option>
+            <option value="to left">to left</option>
+            <option value="to top">to top</option>
+            <option value="to bottom">to bottom</option>
+          </select>
+        </div>
+        <span class="separetor">|</span>
+        <div class="form-group">
+          <label for="">Color Stop One</label>
+          <div class="input-container">
+            <input type="text" v-model="colorOne" />
+            <input type="color" v-model="colorOne" />
+          </div>
+        </div>
+        <span class="separetor">|</span>
+        <div class="form-group">
+          <label for="">Color Stop Two</label>
+          <div class="input-container">
+            <input type="text" v-model="colorTwo" />
+            <input type="color" v-model="colorTwo" />
+          </div>
+        </div>
+      </form>
+      <div class="result">
+        <span>Css Code:</span> background-image: linear-gradient({{direction}}, {{colorOne}}, {{colorTwo}});
+      </div>
+      <div class="syntax">
+        <span>Syntax:</span> background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+      </div>
+    </div>
+    <div class="vid-link">
+      <a
+        href="https://www.youtube.com/watch?v=yQjKEpQ2VOc&list=PLDoPjvoNmBAzDuaT7kEURZQbw9dQHepK9&index=10"
+        target="blank"
+        >Video Of The Course</a
+      >
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#elzero-app",
+        data: {
+          direction: "to right",
+          colorOne: "#FF0000",
+          colorTwo: "#FFFF00",
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>

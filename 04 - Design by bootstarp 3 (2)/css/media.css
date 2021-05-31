@@ -1,0 +1,78 @@
+/* Start Media */
+@media(max-width: 991px)/*xs & sm*/
+{
+  .text-center-xs-sm{text-align: center}
+  .header h1{margin-top: 40px}
+  .header h1 ~ .lead:after{margin: 15px auto}
+  .header button {margin-bottom: 50px; margin-top: 5px}
+  .header .centering-vh{margin-top: 50px}
+  .social-section h4{margin-bottom: 10px}
+  .tabs-section{padding: 0}
+  .tabs-section li
+  {
+    display: inline-flex;
+    width: 31.33333%;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap
+  }
+  .tabs-section .tabs-content h4{margin-bottom: 15px}
+  .tabs-section .tabs-content button{margin: 20px auto; display: block}
+  .sublist{padding: 20px 0}
+  .sublist .list-icon .col-xs-2{width: 6.666667%}
+  .standard{padding: 20px 0}
+  .awesome-section{padding: 20px 0}
+  .awesome-section .awesome-heading{margin-bottom: 30px}
+  .awesome-section .awesome-content{margin-bottom: 30px}
+  .awesome-section .awesome-info .awesome-content h3{margin: 10px 0 10px}
+  .pricing{padding: 20px 0}
+  .pricing .pricing-heading p{margin-bottom: 0}
+  .pricing .pricing-content .table-one{margin-bottom: 30px}
+  .pricing .pricing-content .table-two{margin-bottom: 30px}
+  .pricing .pricing-content .table-three{margin-bottom: 30px}
+  .testimonials-section{padding: 20px 0}
+  .testimonials-section .testimonials-info .media{margin-bottom: 40px}
+  .stylish .overlay{padding: 20px 0}
+  .contact-us{padding: 20px 0}
+}
+
+@media(max-width: 270px)/*xs*/
+{
+  .header{height: 160vh}
+  .social-section i{margin: 10px 0; font-size: 29px}
+  .stylish{min-height: 400px}
+  .footer i{font-size: 16px; margin: 15px 2px 5px}
+}
+
+@media(min-width: 271px) and (max-width: 442px)/*xs*/
+{
+  .header{height: 140vh}
+  .social-section i{font-size: 22px; margin: 10px 0}
+  .stylish{min-height: 380px}
+  .footer i{font-size: 16px; margin: 15px 5px 5px}
+}
+
+@media(min-width: 443px) and (max-width: 767px)/*xs*/
+{
+  .header{height: 120vh}
+  .social-section i {margin: 10px 2px;font-size: 32px}
+}
+
+@media(min-width: 768px) and (max-width: 991px)/*sm*/
+{
+  .header{height: 120vh}
+  .social-section i {margin: 10px 2px;font-size: 32px}
+}
+
+@media(min-width: 992px) and (max-width: 1199px)/*md*/
+{
+  .social-section i{margin: 10px 9px}
+  .tabs-section .tab-switch li{height: 110px; line-height: 110px}
+}
+
+@media(min-width: 1200px)/*lg*/
+{
+  .tabs-section .tab-switch li{height: 110px; line-height: 110px}
+}
+/* End Media */

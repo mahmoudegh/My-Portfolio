@@ -1,0 +1,668 @@
+/*
+  Theme Name: ElitCorp
+  Theme Coder: Mahmoud Galal
+  PSD Designer:
+  FirstColor: #08526D
+  SecondColor: #ed1d24
+*/
+
+body{font-family: 'Lato', sans-serif}
+
+/* Start Uppre Bar */
+.upper-bar{background-color: #08526D; color: #ddd; padding: 7px 0}
+.upper-bar ul{margin-bottom: 0}
+.upper-bar li{display: inline-block}
+
+.upper-bar .phone:before
+{
+  font-family: "FontAwesome";
+  content: "\f095";
+  margin-right: 5px;
+  cursor: pointer
+}
+
+.upper-bar .email:before
+{
+  font-family: "FontAwesome";
+  content: "\f003";
+  margin-right: 5px;
+  cursor: pointer
+}
+
+.upper-bar a{color: #ddd; font-size: 14px}
+.upper-bar a{line-height: 32px}
+.upper-bar .phone a{margin-right: 20px}
+.upper-bar a:hover{color: #fff; text-decoration: none}
+.upper-bar li.lets{font-size: 14px}
+
+.upper-bar li.get a
+{
+  color: #fff;
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid #ed1d24;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 5px
+}
+
+.upper-bar li.get a:hover{background-color: #ed1d24}
+/* End Uppre Bar */
+
+/* Start Navbar */
+.navbar{padding: 25px 10px}
+.navbar .dropdown-toggle::after{display: none}
+.navbar-light .navbar-nav .nav-link
+{
+  color: #08526D;
+  margin-left: 18px;
+  font-weight: bold;
+  font-size: 16px
+}
+
+.navbar-light .navbar-nav .nav-link:hover{color: #ed1d24}
+.navbar-expand-lg .navbar-nav .dropdown-menu
+{
+  left: 25px;
+  border: none;
+  border-radius: 0;
+  box-shadow: 1px 1px 3px 0 #eee
+}
+
+.dropdown:hover .dropdown-menu{display: block; margin-top: 0}
+.dropdown-item{color: #08526D; font-size: 12px; padding: 10px 25px}
+.dropdown-item:hover
+{
+  color: #fff;
+  background-color: #ed1d24;
+  font-style: italic;
+  padding-left: 10px;
+  transition: padding .5s ease-in-out
+}
+/* End Navbar */
+
+/* Start Slider */
+.slider .carousel-inner{overflow: hidden}
+.slider .carousel-item img{height: 100%}
+.slider .carousel-item:after /* overlay */
+{
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.5)
+}
+
+.slider .carousel-item .container{position: relative}
+
+.slider .carousel-caption
+{
+  font-size: 68px;
+  font-weight: bold;
+  text-align: left;
+  top: 50%;
+  margin-top: -153.25px
+}
+
+.slider .carousel-caption p{line-height: 1}
+
+.slider .carousel-caption span
+{
+  background-color: #ed1d24;
+  padding: 0 10px 5px;
+  display: inline-block;
+  margin-top: 15px
+}
+
+.slider .carousel-indicators li
+{
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer
+}
+
+.slider .carousel-indicators li:hover{background-color: #fff}
+.slider .carousel-indicators li.active{background-color: #fff}
+.slider i{background-color: #000; padding: 5px 15px}
+.slider i:hover{background-color: #ed1d24; cursor: pointer}
+.slider a{display: none; opacity: 1}
+.slider:hover a{display: flex; cursor: default}
+/* End Slider */
+
+/* Start Features Section */
+.features{padding: 70px 0 30px; background-color: #fff; overflow: hidden}
+.features i
+{
+  color: #fff;
+  background-color: #ed1d24;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px
+}
+.features h4{color: #08526D}
+.features p{color: #8B999F; margin-bottom: 40px}
+
+.features .animated:first-of-type{animation-delay: 0}
+.features .animated:nth-of-type(2){animation-delay: .2s}
+.features .animated:nth-of-type(3){animation-delay: .4s}
+.features .animated:last-of-type{animation-delay: .6s}
+/* End Features Section */
+
+/* Start Overview Section */
+.overview{background-color: #F0F5F7; padding: 70px 0}
+.overview .h1{font-weight: 900; margin-bottom: 30px; letter-spacing: 2px}
+.overview p{color: #555; letter-spacing: 2px}
+.overview button
+{
+  background-color: #ed1d24;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 30px;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer
+}
+.overview button:hover{background-color: #08526D}
+/* End Overview Section */
+
+/* Start Featured Work Section */
+.featured-work{background-color: #fff; padding: 70px 0}
+.featured-work .h1{font-weight: 900; margin-bottom: 30px; letter-spacing: 2px}
+
+.featured-work p
+{
+  color: #555;
+  letter-spacing: 3px;
+  line-height: 2;
+  margin-bottom: 40px
+}
+
+.featured-work ul{padding: 0; margin-bottom: 50px}
+
+.featured-work li
+{
+  color: #08526D;
+  background-color: #fff;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 9px 15px;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  min-width: 90px
+}
+
+.featured-work li:hover{border-color: #ed1d24; color: #ed1d24}
+
+.featured-work li.active
+{
+  color: #fff;
+  background-color: #ed1d24;
+  border-color: #ed1d24
+}
+
+.featured-work-items .col-lg-3,
+.featured-work-items .col-md-6,
+.featured-work-items .col-sm-12,
+.featured-work-items .col-xs-12{padding: 0}
+
+.featured-work-items .row{margin: 0}/* to remove horizontal scroll */
+
+.featured-work-items img{width: 100%}
+
+.featured-work-items .overlay
+{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  padding: 9%
+}
+
+.item-1:hover .overlay, .item-2:hover .overlay,
+.item-3:hover .overlay, .item-4:hover .overlay,
+.item-5:hover .overlay, .item-6:hover .overlay,
+.item-7:hover .overlay, .item-8:hover .overlay
+{
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+
+.featured-work-items .title
+{
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+  padding: 38% 0 40%
+}
+
+.featured-work-items .title h3
+{
+  color: #ed1d24;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px
+}
+
+.featured-work-items .title p{color: #fff; font-size: 16px}
+
+.featured-work-items .shuffel
+{
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out
+}
+/* End Featured Work Section */
+
+/* Start Latest Post Section */
+.latest-post{background-color: #fff}
+.latest-post .card-img-top:hover{cursor: pointer}
+.latest-post h2{font-weight: 900; letter-spacing: 3px; margin-bottom: 25px}
+.latest-post .lead{color: #555; letter-spacing: 2px; margin-bottom: 50px}
+.latest-post .card{border: none; margin-bottom: 70px}
+.latest-post .card-body{padding: 0}
+.latest-post .card-body a{color: #ed1d24; font-weight: bold}
+.latest-post .card-title{margin-top: 20px; color: #08526D; font-weight: bold}
+.latest-post .card-date{color: #8B999F}
+.latest-post .card-text{color: #555}
+/* End Latest Post Section */
+
+/* Start Testimonials Section */
+.testimonials
+{
+  background-image: url('../img/testimonials.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+}
+
+.testimonials .carousel-inner{overflow: hidden}
+.testimonials .carousel-item{max-height: 700px}
+
+.testimonials .carousel-item:after /* overlay */
+{
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.5)
+}
+
+.testimonials .carousel-caption{margin-top: -160px; top: 50%}
+.testimonials .carousel-caption img{margin-bottom: 20px}
+
+.testimonials .carousel-indicators li
+{
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #fff;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer
+}
+
+.testimonials .carousel-indicators li:hover{background-color: transparent}
+.testimonials .carousel-indicators li.active{background-color: transparent}
+.testimonials i{background-color: #000; padding: 5px 15px}
+.testimonials i:hover{background-color: #ed1d24; cursor: pointer}
+.testimonials a{display: none; opacity: 1}
+.testimonials:hover a{display: flex; cursor: default}
+/* End Testimonials Section */
+
+/* Start Pricing Section */
+.pricing{padding: 80px 0; background-color: #f7f7f7}
+.pricing .h1
+{
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 40px
+}
+
+.pricing .main-p
+{
+  color: #555;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  line-height: 1.7
+}
+
+.pricing .order-first{display: flex; order: 1}
+.pricing .order-seconde{display: flex; order: 0}
+.pricing .order-third{display: flex; order: 2}
+
+.pricing .card
+{
+  border: none;
+  border-radius: 0;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.125);
+  width: 100%;
+  margin-bottom: 20px
+}
+
+.pricing .card-title
+{
+  font-weight: bolder;
+  font-size: 25px;
+  color: #08526D
+}
+
+.pricing .card-text
+{
+  color: #8B999F;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px
+}
+
+.pricing .list-group-item{border: none; color: #555}
+
+.pricing .list-group-item:first-of-type
+{
+  color: #08526D;
+  background-color: #f7f7f7;
+  margin-bottom: 30px
+}
+
+.pricing .corporate .list-group-item:first-of-type
+{
+  color: #fff;
+  background-color: #ed1d24
+}
+
+.pricing .list-group-item span:first-of-type
+{
+  font-size: 40px;
+  font-weight: bold
+}
+
+.pricing .btn
+{
+  background-color: #ed1d24;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0;
+  padding: 10px 40px
+}
+
+.pricing .btn:hover{background-color: #08526D}
+/* End Pricing Section */
+
+/* Start Why Us Section */
+.why-us{overflow: hidden}
+.why-us .row{margin: 0}
+.why-us .reset{margin: 0; padding: 0}
+.why-us .row div{min-height: 500px}
+
+.why-us .left-part
+{
+  background-image: url("../img/why-us.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+}
+
+.why-us .right-part{background-color: #08526D; padding: 125px 25px}
+.why-us .h1{color: #fff; font-weight: bold; margin-bottom: 50px}
+
+.why-us p
+{
+  color: #b5c3c9;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  margin-bottom: 30px
+}
+
+.why-us button
+{
+  border-radius: 0;
+  color: #fff;
+  font-weight: bold;
+  background-color: #ed1d24;
+  padding: 10px 40px
+}
+
+.why-us button:hover{background-color: #08526D}
+/* End Why Us Section */
+
+/* Start Counter Section */
+.counter{background-color: #fff; padding: 70px 0}
+.counter .icon{margin: 30px 0}
+.counter i{color: #08526D; margin-bottom: 10px}
+
+.counter span
+{
+  display: block;
+  color: #ed1d24;
+  font-weight: bold;
+  letter-spacing: 2px
+}
+
+.counter span:first-of-type
+{
+  color: #08526D;
+  font-size: 40px;
+  font-weight: 900
+}
+/* End Counter Sections */
+
+/* Start You Think Section */
+.you-think{background-color: #ed1d24; padding: 80px 0; color: #fff}
+.you-think p{font-size: 28px; font-weight: 300}
+
+.you-think button
+{
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 10px 25px
+}
+
+.you-think button:hover{background-color: #08526D}
+/* End You Think Section */
+
+/* Start Footer Section */
+.footer{background-color: #fff; padding: 50px 0}
+.footer div{margin-bottom: 20px}
+.footer .first img{margin-bottom: 15px}
+
+.footer .first p
+{
+  color: #555;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 10px
+}
+
+.footer .first i{margin-right: 5px}
+.footer a{text-decoration: none; color: #08526D}
+.footer a:hover{color: #ed1d24}
+.footer h4{margin-bottom: 25px; color: #08526D; line-height: 21px}
+.footer .links{margin-bottom: 0}
+.footer .reset{margin-bottom: 0}
+.footer .links ul{margin-bottom: 0}
+
+.footer .links a:hover
+{
+  padding-left: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out
+}
+
+.footer .links li:before
+{
+  font-family: "FontAwesome";
+  font-size: 20px;
+  content: "\f105";
+  padding: 0 7px 0 0;
+  color: #ccc
+}
+
+.footer .contact-us{margin-bottom: 0}
+.footer .contact-us li{margin-bottom: 5px; color: #555}
+/* End Footer Section */
+
+/* Start Icon Bar Section */
+.icon-bar
+{
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  background-color: #fff
+}
+
+.icon-bar p{color: #666; margin-bottom: 0}
+
+.icon-bar i
+{
+  color: #666;
+  font-size: 20px;
+  margin-left: 20px;
+  cursor: pointer
+}
+
+.icon-bar i:hover{color: #ed1d24}
+/* End Icon Bar Section */
+
+/* My Framework */
+.uppercase{text-transform: uppercase}
+
+@keyframes fadeInUp
+{
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0)}
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)}
+}
+/* My Framework */
+
+/* Start Media */
+@media(max-width: 225px)/* xxxs screen */
+{
+  .upper-bar li.lets{margin-bottom: 5px}
+  .navbar-light .navbar-toggler
+  {
+    padding: 10px 0px;
+    font-size: 13px;
+    margin-left: 3px
+  }
+
+  .slider .carousel-caption{font-size: 50px}
+  .overview .h1{font-size: 24px; margin-bottom: 20px}
+  .featured-work li{display: block}
+  .featured-work ul{max-width: 350px; margin: 20px auto}
+  .featured-work-items .row{padding: 0 5px}
+  .why-us .right-part{padding: 50px 25px}
+  .you-think{padding: 40px 0}
+  .you-think p{margin-bottom: 35px; line-height: 23px}
+  .footer h4{margin-bottom: 15px}
+  .footer .links{margin-bottom: 35px}
+  .icon-bar p{margin-bottom: 10px}
+}
+
+@media(min-width: 226px) and (max-width: 380px)/* xxs screen */
+{
+  .upper-bar li.lets{margin-bottom: 5px}
+  .navbar-light .navbar-toggler
+  {
+    padding: 10px 0px;
+    font-size: 13px;
+    margin-left: 3px
+  }
+
+  .slider .carousel-caption{font-size: 50px}
+  .overview .h1{font-size: 24px; margin-bottom: 20px}
+  .featured-work li{display: block}
+  .featured-work ul{max-width: 350px; margin: 20px auto}
+  .featured-work-items .row{padding: 0 5px}
+  .why-us .right-part{padding: 50px 25px}
+  .you-think{padding: 40px 0}
+  .you-think p{margin-bottom: 35px; line-height: 23px}
+  .footer h4{margin-bottom: 15px}
+  .footer .links{margin-bottom: 35px}
+  .icon-bar p{margin-bottom: 10px}
+}
+
+@media(min-width: 381px) and (max-width: 575px)/* xs screen */
+{
+  .slider .carousel-caption{font-size: 50px}
+  .overview .h1{font-size: 24px; margin-bottom: 20px}
+  .featured-work li{display: block}
+  .featured-work ul{max-width: 350px; margin: 20px auto}
+  .featured-work-items .row{padding: 0 5px}
+  .why-us .right-part{padding: 50px 25px}
+  .you-think{padding: 40px 0}
+  .you-think p{margin-bottom: 35px; line-height: 23px}
+  .footer h4{margin-bottom: 15px}
+  .footer .links{margin-bottom: 35px}
+  .icon-bar p{margin-bottom: 10px}
+}
+
+@media(min-width: 576px) and (max-width: 767px)/* sm screen */
+{
+  .slider .carousel-caption{font-size: 50px}
+  .featured-work-items .row{padding: 0 5px}
+  .why-us .right-part{padding: 50px 25px}
+  .pricing .order-first{display: flex; order: 0}
+  .pricing .order-seconde{display: flex; order: 1}
+  .pricing .order-third{display: flex; order: 2}
+  .you-think{padding: 40px 0}
+  .you-think p{margin-bottom: 35px; line-height: 23px}
+  .footer h4{margin-bottom: 15px}
+  .icon-bar p{margin-bottom: 10px}
+}
+
+@media (min-width: 768px) and (max-width: 991px)/* md screen */
+{
+  .upper-bar .fix{padding-left: 0; padding-right: 0}
+  .slider .carousel-caption{font-size: 50px}
+  .featured-work-items .row{padding: 0 5px}
+  .footer h4{margin-bottom: 15px}
+}
+
+@media(min-width: 992px) and (max-width: 1199px)/* lg screen */
+{
+
+}
+
+@media(min-width: 1200px)/* xl screen */
+{
+
+}
+/* End Media */

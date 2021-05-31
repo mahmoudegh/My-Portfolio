@@ -1,0 +1,89 @@
+* {
+  font-family: Arial, Tahoma;
+  box-sizing: border-box;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.container form {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container form input {
+  padding: 15px 20px;
+  width: calc(80% - 210px);
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+.container form input:focus {
+  outline: none;
+}
+.container form button {
+  color: #fff;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  /* width: 100px; */
+  margin-left: 5px;
+}
+.container form .add-task {
+  width: 205px;
+}
+.container form button:focus {
+  outline: none;
+}
+.container form button:first-of-type {
+  background-color: #2196f3;
+}
+.container form .delete-all {
+  background-color: #f44336;
+}
+.container .worn {
+  background-color: #f44336;
+  color: #fff;
+  width: 40%;
+  margin: 0 auto 5px;
+}
+.container .tasks-list {
+  overflow: hidden;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.container .tasks-list .task-box {
+  float: left;
+  background-color: rgba(139, 195, 74, 0.25);
+  padding: 15px 20px;
+  width: calc(80% - 105px);
+  text-align: left;
+  font-size: 20px;
+}
+.container .tasks-list .delete {
+  background-color: #f44336;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 20px;
+  display: inline-block;
+  width: 100px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.vid-link {
+  background-color: #ccc;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #000;
+  margin-top: 30px;
+}
+.vid-link a {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}

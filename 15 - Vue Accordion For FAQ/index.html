@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js Tutorials and Examples</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="elzero-app" class="container">
+      <div class="question-box" v-for="question in questions">
+        <h3 @click="question.open = !question.open">{{question.title}}</h3>
+        <div class="question-reply" v-show="question.open">
+          <p>{{question.reply}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="vid-link">
+      <a
+        href="https://www.youtube.com/watch?v=fSnqWYmsl50&list=PLDoPjvoNmBAzDuaT7kEURZQbw9dQHepK9&index=15"
+        target="blank"
+        >Video Of The Course</a
+      >
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+      var questions = {
+        "Question One": {
+          open: true,
+          title: "One: What Happen When Bla Bla Bla ?",
+          reply: "You Can Do What You Want Bla Bla Bla.",
+        },
+        "Question Two": {
+          open: false,
+          title: "Two: What Happen When Bla Bla Bla ?",
+          reply: "You Can Do What You Want Bla Bla Bla.",
+        },
+        "Question Three": {
+          open: false,
+          title: "Three: What Happen When Bla Bla Bla ?",
+          reply: "You Can Do What You Want Bla Bla Bla.",
+        },
+        "Question Four": {
+          open: false,
+          title: "Four: What Happen When Bla Bla Bla ?",
+          reply: "You Can Do What You Want Bla Bla Bla.",
+        },
+        "Question Five": {
+          open: false,
+          title: "Five: What Happen When Bla Bla Bla ?",
+          reply: "You Can Do What You Want Bla Bla Bla.",
+        },
+      };
+      var app = new Vue({
+        el: "#elzero-app",
+        data: {
+          questions: questions,
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>

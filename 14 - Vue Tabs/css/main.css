@@ -1,0 +1,45 @@
+* {
+  font-family: Arial, Tahoma;
+  box-sizing: border-box;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.container .tabs-choose {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.container .tabs-choose li {
+  background-color: #eee;
+  padding: 10px 20px;
+  cursor: pointer;
+  opacity: .3;
+}
+.container .tabs-choose li.active {
+  opacity: 1;
+}
+.container .tabs-choose li:not(:last-child) {
+  margin-right: 20px;
+}
+.container .tabs-content {
+  background-color: #ddd;
+  text-align: left;
+  padding: 20px;
+}
+.vid-link {
+  background-color: #ccc;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #000;
+  margin-top: 30px;
+}
+.vid-link a {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}

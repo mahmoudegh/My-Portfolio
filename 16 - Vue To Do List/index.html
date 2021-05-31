@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js Tutorials and Examples</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body>
+    <div id="elzero-app" class="container">
+      <form action="">
+        <input id="input" type="text" placeholder="Type Your Task" v-model="taskText" autocomplete="off" />
+        <button class="add-task" @click.prevent="addTask" :disabled="!taskText">Add Task</button>
+        <button
+          class="delete-all animate__animated animate__backInRight"
+          v-if="tasks.length > 1"
+          @click.prevent="deleteAll"
+        >
+          Delete All
+        </button>
+      </form>
+      <div class="worn animate__animated animate__slideInUp" v-if="worn !== ''">{{worn}}</div>
+      <div class="tasks-list animate__animated animate__fadeInLeft" v-for="(task, index) in tasks">
+        <div
+          class="task-box"
+          @click="task.done = !task.done"
+          :style="{'text-decoration' : task.done ? 'line-through' : 'none'}"
+        >
+          {{task.words}}
+        </div>
+        <span class="delete" @click="animateTask($event); deleteTask(index)">Delete</span>
+      </div>
+    </div>
+    <div class="vid-link">
+      <a
+        href="https://www.youtube.com/watch?v=OoDEFCkFOzE&list=PLDoPjvoNmBAzDuaT7kEURZQbw9dQHepK9&index=8"
+        target="blank"
+        >Video Of The Course</a
+      >
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#elzero-app",
+        data: {
+          tasks: [],
+          taskText: "",
+          tasksList: [],
+          worn: "",
+        },
+        methods: {
+          addTask: function () {
+            // Create Task List Array
+            this.tasks.forEach((task) => this.tasksList.push(task.words));
+
+            // Remove Repeats from Task List Array
+            let uniqueArray = [...new Set(this.tasksList)];
+
+            if (uniqueArray.includes(document.getElementById("input").value) !== false) {
+              this.worn = "This Task Is Alredy Exist.";
+              document.getElementById("input").focus();
+              this.taskText = "";
+            } else {
+              this.tasks.push({ words: this.taskText, done: false });
+              this.taskText = "";
+              this.worn = "";
+              document.getElementById("input").focus();
+              if (this.tasks.length > 1) {
+                document.querySelector(".add-task").style.width = "100px";
+              } else {
+                document.querySelector(".add-task").style.width = "205px";
+              }
+            }
+          },
+          animateTask: function (event) {
+            event.target.parentNode.classList.add("animate__fadeOutRight");
+            setTimeout(function () {
+              document
+                .querySelectorAll(".tasks-list")
+                .forEach((task) => task.classList.remove("animate__fadeOutRight", "animate__fadeInLeft"));
+              document.getElementById("input").focus();
+            }, 500);
+          },
+          deleteTask: function (index) {
+            setTimeout(
+              function () {
+                // Deleta a Task
+                this.tasks.splice(index, 1);
+
+                if (this.worn !== "") {
+                  document.querySelector(".worn").classList.remove("animate__slideInUp");
+                  document.querySelector(".worn").classList.add("animate__slideOutDown");
+                }
+
+                // Empty a Task List
+                this.tasksList = [];
+
+                setTimeout(
+                  function () {
+                    // Remove worn text
+                    this.worn = "";
+                  }.bind(this),
+                  300
+                );
+
+                // Restyling Buttons
+                if (this.tasks.length < 2) {
+                  document.querySelector(".add-task").style.width = "205px";
+                }
+              }.bind(this),
+              400
+            );
+          },
+          deleteAll: function () {
+            // Play animation
+            document.querySelectorAll(".tasks-list").forEach((task) => task.classList.add("animate__fadeOutRight"));
+
+            document.querySelector(".delete-all").classList.remove("animate__backInRight");
+
+            setTimeout(
+              function () {
+                this.tasks = [];
+                this.tasksList = [];
+                this.worn = "";
+                this.taskText = "";
+                document.getElementById("input").focus();
+                document.querySelector(".add-task").style.width = "205px";
+              }.bind(this),
+              1000
+            );
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
