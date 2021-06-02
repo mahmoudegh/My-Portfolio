@@ -494,6 +494,7 @@ input[type='text'],
 input[type='password'],
 input[type='email'],
 input[type='tel'],
+input[type='file'],
 select,
 textarea {
   -moz-appearance: none;
@@ -519,10 +520,16 @@ textarea {
   width: 100%;
 }
 
+input[type='file'] {
+  position: absolute;
+  left: -5000000px;
+}
+
 input[type='text']:invalid,
 input[type='password']:invalid,
 input[type='email']:invalid,
 input[type='tel']:invalid,
+input[type='file']:invalid,
 select:invalid,
 textarea:invalid {
   box-shadow: none;
@@ -532,6 +539,7 @@ input[type='text']:focus,
 input[type='password']:focus,
 input[type='email']:focus,
 input[type='tel']:focus,
+input[type='file']:focus,
 select:focus,
 textarea:focus {
   background: rgba(255, 255, 255, 0.075);
@@ -565,12 +573,16 @@ select::-ms-expand {
 input[type='text'],
 input[type='password'],
 input[type='email'],
+input[type='tel'],
+input[type='file'],
 select {
   height: 2.75rem;
 }
 
 textarea {
   padding: 0.75rem 1rem;
+  min-height: 160px;
+  margin-bottom: 30px;
 }
 
 input[type='checkbox'],
@@ -849,10 +861,6 @@ ul {
   padding-left: 1em;
 }
 
-ul li {
-  padding-left: 0.5em;
-}
-
 ul.alt {
   list-style: none;
   padding-left: 0;
@@ -1008,15 +1016,35 @@ ul.icons {
   cursor: default;
   list-style: none;
   padding-left: 0;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 590px) {
+  ul.icons {
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+  }
+  .my-mobile,
+  .submit-btn {
+    width: 100%;
+  }
+  ul.icons li {
+    margin-bottom: 20px;
+  }
+  form {
+    margin: 0;
+  }
 }
 
 ul.icons li {
   display: inline-block;
-  padding: 0 0.75em 0 0;
+  /* padding: 0 0.75em 0 0; */
 }
 
 ul.icons li:last-child {
-  padding-right: 0;
+  /* padding-right: 0; */
 }
 
 ul.icons li a {
@@ -1111,7 +1139,9 @@ input[type='submit'],
 input[type='reset'],
 input[type='button'],
 button,
-.button {
+.button,
+.my-mobile,
+.upload-file {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -1140,11 +1170,26 @@ button,
   white-space: nowrap;
 }
 
+.my-mobile {
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.upload-file {
+  width: 100%;
+  margin: 0;
+}
+
+.social-icons-container li:not(:last-child) {
+  margin-right: 5px;
+}
+
 input[type='submit']:hover,
 input[type='reset']:hover,
 input[type='button']:hover,
 button:hover,
-.button:hover {
+.button:hover,
+.upload-file:hover {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
@@ -1210,8 +1255,13 @@ button:disabled,
 input[type='submit'],
 input[type='reset'],
 input[type='button'],
-button {
+button,
+.upload-file {
   line-height: calc(2.75rem - 2px);
+}
+
+input[type='submit'] {
+  width: 100%;
 }
 
 /* BG */
@@ -1589,7 +1639,7 @@ body.is-preload #header .content .inner {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 595px) {
   #header {
     padding: 1.5rem 0;
   }
@@ -1979,7 +2029,7 @@ body.is-preload #footer {
   width: 200px;
   padding: 3px;
   background-color: #f6f6f6;
-  border: ipx solid #ccc;
+  border: 1px solid #ccc;
   margin: 5px;
   cursor: pointer;
 }
@@ -2002,6 +2052,12 @@ body.is-preload #footer {
   padding: 20px;
   z-index: 1001;
 }
+
+@media (max-width: 540px) {
+  .popup-box {
+    width: 290px;
+  }
+}
 .popup-box h3 {
   font-weight: bold;
   text-align: center;
@@ -2009,22 +2065,34 @@ body.is-preload #footer {
   margin: 0 0 20px;
 }
 .close-button {
-  background-color: #000;
+  background-color: #ccc;
   color: #fff;
   font-weight: bold;
   font-size: 20px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   cursor: pointer;
   text-align: center;
   font-family: Arial, Tahoma;
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: 0;
+  right: 0;
 }
 .popup-box img {
   max-width: 100%;
 }
 /* End gallery */
+
+@media (max-width: 575px) {
+  .featured-work li {
+    display: block;
+  }
+  .featured-work ul {
+    max-width: 350px;
+    margin: 20px auto;
+  }
+  .featured-work-items .row {
+    padding: 0 5px;
+  }
+}

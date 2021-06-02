@@ -357,32 +357,63 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="mahmoudegh8@gmail.com">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+
+								<form name="form1" enctype="multipart/form-data" method="post" action="file.php" id="application-form" class="form">
+									<div class="row clearfix">
+										<div class="col-md-5 col-sm-12 col-xs-12">
+											<div class="form-group">
+												<label class="form-label">Name</label>
+												<input type="text" value="" placeholder="Enter Your Name"  name="name" required>
+											</div>
+											<div class="form-group">
+												<label class="form-label">Email</label>
+												<input type="email" value="" placeholder="Enter Your Email Address" name="email" required >
+											</div>
+											<div class="form-group">
+												<label class="form-label">Phone</label>
+												<input type="tel" value="" placeholder="Contact Number" name="phone">
+											</div>
+											<div class="clearfix"></div>
+											
 										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="email" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+										<div class="col-md-7 col-sm-12 col-xs-12">
+											<div class="form-group">
+												<label class="form-label">Message</label>
+												<textarea name="message" placeholder="Type Message Here" required></textarea>
+												<p>
+													<label for="exampleInputFile" class="upload-file">Upload File</label>
+													<input type="file" id="exampleInputFile" name="my_file">
+												</p>
+												<div class="form-group text-right">
+													<!-- <button type="submit"  class="theme-btn dark-btn hvr-bounce-to-right">
+														<span class="fa fa-envelope"></span> Send Message </button> -->
+														
+												</div>
+											</div>
 										</div>
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										
+									<ul class="icons">
+										<li class="submit-btn">
+											<button type="submit"  class="submit-btn theme-btn dark-btn hvr-bounce-to-right">
+												<span class="fa fa-envelope"></span> Send Message </button>
+										</li>
+										<li class="my-mobile">
+											<i class="fas fa-mobile-alt"></i>
+											<i class="fab fa-whatsapp"></i>
+											<span>01020242590</span>
+										</li>
+										
+										<div class="social-icons-container">
+											<li><a href="https://www.facebook.com/mahmoudegh" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.facebook.com/mahmoudegh" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.linkedin.com/in/dr-mahmoud-galal-313542212/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/mahmoudegh" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										</div>
 									</ul>
 								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/mahmoudegh" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.linkedin.com/in/dr-mahmoud-galal-313542212/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/mahmoudegh" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
+								
+								
 							</article>
 
 						<!-- Elements -->
@@ -396,7 +427,7 @@
     <div class="gallery">
       <div class="container">
         <div class="images-box">
-          <img src="images/01certificate.jpg" alt="Image one" />
+          <img src="images/01certificate.jpg" alt="Image one"/>
           <img src="images/01certificate.jpg" alt="Image two" />
           <img src="images/01certificate.jpg" alt="Image three" />
           <img src="images/01certificate.jpg" alt="Image four" />
