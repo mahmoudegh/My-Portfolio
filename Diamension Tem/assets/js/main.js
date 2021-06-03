@@ -403,13 +403,36 @@ let allSkills = document.querySelectorAll(
   '.skills .skill-box .skill-progress span',
 );
 
-document.querySelector('.active-skills').onclick = function () {
+function animateSkills() {
+  document
+    .querySelector('.active-skills')
+    .addEventListener('click', function () {
+      decreaseProgress();
+      increaseProgress();
+    });
+
+  // window.addEventListener('load', increaseProgress);
+
+  document.querySelectorAll('.close').forEach(function (e) {
+    e.addEventListener('click', decreaseProgress);
+  });
+}
+
+animateSkills();
+
+function increaseProgress() {
   allSkills.forEach((skill) => {
     setInterval(function () {
       skill.style.width = skill.dataset.progress;
-    }, 1000);
+    }, 500);
   });
-};
+}
+
+function decreaseProgress() {
+  allSkills.forEach((skill) => {
+    skill.style.width = 0;
+  });
+}
 
 //////////////////////////////////////////////////////
 
@@ -434,17 +457,23 @@ ourGallery.forEach((img) => {
     popupBox.className = 'popup-box';
 
     if (img.alt !== null) {
-      // Create heading
-      let imgHeading = document.createElement('h3');
+      // Create anchor
+      let imgAnchor = document.createElement('a');
 
-      // Create text for heading
-      let imgText = document.createTextNode(img.alt);
+      // Create link name
+      let imgLinkName = document.createTextNode(img.alt);
 
-      // Append text to the heading
-      imgHeading.appendChild(imgText);
+      // Set href value
+      imgAnchor.setAttribute('href', img.dataset.link);
 
-      // Append heading to popup box
-      popupBox.appendChild(imgHeading);
+      // Set target value
+      imgAnchor.target = '_blank';
+
+      // Append link name to the anchor
+      imgAnchor.appendChild(imgLinkName);
+
+      // Append anchor to popup box
+      popupBox.appendChild(imgAnchor);
     }
 
     // Create the image
