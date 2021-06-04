@@ -4,7 +4,7 @@ if($_POST && isset($_FILES['my_file']))
 {
 
     $from_email = $_POST['email']; //sender email
-    $recipient_email = 'navedkhan012@gmail.com'; //recipient email
+    $recipient_email = 'mahmoudegh8@gmail.com'; //recipient email
     $subject = 'Enquiry'; //subject of email
     $message = 'Name:'.$_POST['name']; //message body
     $message.=',phone :'.$_POST['phone'].',';

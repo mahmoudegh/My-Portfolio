@@ -332,6 +332,10 @@
     });
 })(jQuery);
 
+///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// My Edit //////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+
 // Featured Work Shuffle
 $(function () {
   "use strict";
@@ -345,12 +349,14 @@ $(function () {
     }
   });
 });
+///////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////
-
+// Type Writer Effect
+// Select vars
 let links = document.querySelectorAll(".work-link a");
 let target = document.querySelectorAll(".target");
 
+// Control Sections on link click
 for (let i = 0; i < target.length; i++) {
   for (let i = 0; i < links.length; i++) {
     links[i].onclick = function () {
@@ -366,6 +372,7 @@ for (let i = 0; i < target.length; i++) {
   }
 }
 
+// Control Intro on hash change
 window.addEventListener("hashchange", function () {
   if (location.hash === "") {
     document.querySelector(".logo-intro").classList.add("type");
@@ -373,11 +380,13 @@ window.addEventListener("hashchange", function () {
   }
 });
 
+// Control Intro on load
 window.addEventListener("load", function () {
   document.querySelector(".logo-intro").classList.add("type");
   setTimeout(typeWriterEffect, 100);
 });
 
+// Control all sections on load
 window.addEventListener("load", function () {
   for (let i = 0; i < target.length; i++) {
     if (location.hash === "#" + target[i].getAttribute("id")) {
@@ -387,7 +396,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// Writer Type Effect
+// Writer Type Effect 'main function'
 function typeWriterEffect() {
   let myText = document.querySelector(".type").getAttribute("data-text"),
     i = 0;
@@ -411,12 +420,13 @@ function typeWriterEffect() {
     });
   });
 }
-
 ////////////////////////////////////////////////////////////////////////
 
 // Animate skills progress
+// Select variable
 let allSkills = document.querySelectorAll(".skills .skill-box .skill-progress span");
 
+// Control skills on hash change
 window.addEventListener("hashchange", function () {
   if (location.hash === "#about") {
     allSkills.forEach((skill) => {
@@ -435,6 +445,7 @@ window.addEventListener("hashchange", function () {
   }
 });
 
+// Control skills on load
 window.addEventListener("load", function () {
   allSkills.forEach((skill) => {
     setTimeout(function () {
@@ -442,8 +453,7 @@ window.addEventListener("load", function () {
     }, 500);
   });
 });
-
-//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 
 // Create popup with the image
 let ourGallery = document.querySelectorAll(".gallery img");
@@ -522,6 +532,6 @@ document.addEventListener("click", (e) => {
 
     // Remove the overlay
     document.querySelector(".popup-overlay").remove();
-    // location.hash = 'elements';
   }
 });
+///////////////////////////////////////////////////////////////////
