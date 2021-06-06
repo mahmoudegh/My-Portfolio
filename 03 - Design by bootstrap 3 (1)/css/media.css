@@ -9,7 +9,7 @@
   .subscribe .form-control
   {
     margin: 20px auto;
-    width: 400px
+    /* width: 400px */
   }
 
   .navbar-fixed-top .navbar-collapse,
